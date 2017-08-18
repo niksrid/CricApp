@@ -1,0 +1,83 @@
+NOTE : +field+ is where you add the id or string( remove p+symbols and specify id or string and don't give any spaces)
+
+ongoing series(displays all ongoing series , one or more than one,all series ids provided)
+
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.ongoing&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+
+get series by series ID(particular series,with series id)
+
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.ongoing%20where%20SeriesId%3D+ seriesId  +&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+
+teams(flags,logos,coaches,captains-all 3 formats,rankings-all 3 formats,team id)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.teams&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+on going match/matches scorecard(umpires,third umpire,refree,scorecard,location,commentary at fall of wicket,fall of wicket, we'll have to extract players from player id,series,country match being played in,wickets of batsmen to took by particular bowler and more)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.scorecard.live&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+
+player profile
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.players(0%2C25)%20where%20player_name%3D%22+ player_name +%22&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+(0%2C25) is used to display 25 players having the provided player_name 
+
+(extract player id)
+
+
+
+(use player id to get complete profile)
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.player.profile%20where%20player_id%3D+ played_id +&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+Scorecard live summary to be displayed before the user can click on the card and see everything about the match
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.scorecard.live.summary&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+PAST SERIES
+->past series(max liomit 5)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.past&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+->past series by team
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.past%20where%20team_id%3D +team_id+&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+past matches(5 most recent)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.past_matches&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+upcoming matches(next 5)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.upcoming_matches&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+team profile(description , ranking, performance against all teams , performance against each individual team,players)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.team.profile%20where%20team_id%3D+ team_id +&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+commentary(by match id)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.commentary%20where%20match_id%3D+ match_id +&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+news(by region)
+->region is string INDIA=in
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.news%20%20where%20region%3D%22+ region +%22&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+IMPORTANT NOTE :- To increase the default count use (0%2C30) after cricket.xxxxx
+
+For eg :- for past series from most rcent(0) till 50th from recent(50)
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.past(0%2C50)&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+
+NOTE:- how to use callback method 
+
+https://github.com/manV/yahoo-cricket-api-wrapper/blob/master/lib/ongoing.js
+( you cam go back and check other classes)
+
+everything is returned in JSON format , so here's the link for JSON formatter
+
+https://jsonformatter.curiousconcept.com/

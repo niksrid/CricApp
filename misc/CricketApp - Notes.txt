@@ -1,0 +1,79 @@
+
+NOTE : GO THROUGH API'S AND TRY TO GET THE NAME OF THE OBJECTS THAT RETURN THE EXACT STRINGS SO IT MAKES IT EASIER FOR US TO CONSTRUCT OUR OWN API AND STRUCTURE IT PROPERLY. I'LL BE UPDATING THE STRUCTURE REALLY SOON
+
+4 Tabs at the top of the screen
+---------------------------------
+Match, News, Polls / Schedule, Stats
+---------------------------------
+
+
+Match
+---------------------------------
+	Half screen banner (Match panels with team logo's)
+	Scorecard / Polls below
+	Polls related to match that is displayed in panel
+---------------------------------
+
+News
+---------------------------------
+	Horizontal scrolling, news articles with picture
+	Standard news page
+---------------------------------
+
+Polls / Schedule
+---------------------------------
+	Polls using Strawpoll API - https://github.com/strawpoll/strawpoll/wiki/API
+	Polls relatedto matches in gneral / players in general
+---------------------------------
+
+Stats
+---------------------------------
+	3 options
+		Browse Team
+		Browse Series?
+		Browse Players
+		1 Search Bar?
+
+---------------------------------
+
+
+---------------------------------
+List of Attributes that are a must
+		- List each attribute required for all the headings please, I'll do my best to go through as many as possible
+		  (Go through API please) (For example : Players name, particular stats, umpires, etc.)
+---------------------------------
+
+
+
+
+------------------------------------
+	Match
+------------------------------------
+		- Ongoing Matches
+		- Ongoing Series
+		- Teams (For Flags)
+		On click of a match
+		- Scorecard Live Summary
+		- Teams (For everything else)
+		- Commentary
+
+------------------------------------
+	News
+------------------------------------
+		- News (by region id? (Ask in preferences?))
+		- If required, scrape images for news articles
+
+------------------------------------
+	Polls / Schedule
+------------------------------------
+		- Upcoming Matches
+		- Series Upcoming
+
+------------------------------------
+	Stats
+------------------------------------
+		- Players
+		- Teams
+		- Series
+
+
