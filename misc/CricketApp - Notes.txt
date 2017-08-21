@@ -30,7 +30,7 @@ Stats
 ---------------------------------
 	3 options
 		Browse Team
-		Browse Series?
+		Browse Series
 		Browse Players
 		1 Search Bar?
 
@@ -56,11 +56,12 @@ List of Attributes that are a must
 		- Scorecard Live Summary
 		- Teams (For everything else)
 		- Commentary
+		- polls about the match
 
 ------------------------------------
 	News
 ------------------------------------
-		- News (by region id? (Ask in preferences?))
+		- News (by team) (Ask in preferences?))
 		- If required, scrape images for news articles
 
 ------------------------------------
@@ -68,6 +69,7 @@ List of Attributes that are a must
 ------------------------------------
 		- Upcoming Matches
 		- Series Upcoming
+		- current series
 
 ------------------------------------
 	Stats
@@ -75,5 +77,9 @@ List of Attributes that are a must
 		- Players
 		- Teams
 		- Series
+		- rankings
+		- player profile
+		- records
+		
 
 
