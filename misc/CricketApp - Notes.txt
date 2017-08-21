@@ -20,10 +20,12 @@ News
 	Standard news page
 ---------------------------------
 
-Polls / Schedule
+Polls / Schedule / Twitter feed
 ---------------------------------
 	Polls using Strawpoll API - https://github.com/strawpoll/strawpoll/wiki/API
 	Polls relatedto matches in gneral / players in general
+	Twitter feeds of cricket players and analyst 
+	
 ---------------------------------
 
 Stats
@@ -65,11 +67,12 @@ List of Attributes that are a must
 		- If required, scrape images for news articles
 
 ------------------------------------
-	Polls / Schedule
+	Polls / Schedule / Twitter feeds
 ------------------------------------
 		- Upcoming Matches
 		- Series Upcoming
 		- current series
+		- Tweets about ongoing matches & famous analysts and cricketers
 
 ------------------------------------
 	Stats
