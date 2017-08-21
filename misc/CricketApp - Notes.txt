@@ -3,7 +3,7 @@ NOTE : GO THROUGH API'S AND TRY TO GET THE NAME OF THE OBJECTS THAT RETURN THE E
 
 4 Tabs at the top of the screen
 ---------------------------------
-Match, News, Polls / Schedule, Stats
+Match, News, Polls / Twitter feed, Stats
 ---------------------------------
 
 
@@ -20,7 +20,7 @@ News
 	Standard news page
 ---------------------------------
 
-Polls / Schedule / Twitter feed
+Polls / Twitter feed
 ---------------------------------
 	Polls using Strawpoll API - https://github.com/strawpoll/strawpoll/wiki/API
 	Polls relatedto matches in gneral / players in general
@@ -38,6 +38,7 @@ Stats
 
 ---------------------------------
 
+(TEMPORARY :- Schedule on navigation bar )
 
 ---------------------------------
 List of Attributes that are a must
