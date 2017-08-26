@@ -1,0 +1,114 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+API LINK
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://query.yahooapis.com/v1/yql?q=select%20*%20from%20cricket.scorecard%20where%20match_id%3D11985&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=
+
+NOTE :- No arrays , all objects 
+
+"results"->"Scorecard"
+--------------------
+Series Name
+--------------------
+->"series"->"series_name"
+
+--------------------
+Series ID
+--------------------
+->"serie"->"series_id"
+
+------------------------------------------------
+stadium name,city,coutry,end date and start date
+------------------------------------------------
+->"place"->
+"stadium"
+"city"
+"country"
+"Gimaget"(stadium image)
+"date"(start date)
+"enddate"
+
+------------------------------------------------
+Match Name ( eg:- 1st ODI or 2nd Test or 5th T20
+------------------------------------------------
+->mn
+
+---------------------------------------
+Team names( full and short ) logo, flag
+---------------------------------------
+"teams"->
+  Following are elements of team array
+  
+  ->i (team id)
+  
+  ->"fn" ( full name )
+  ->"sn" ( short name )
+ 
+ following are objects, logo is not an array
+  ->"logo"->"std" ( normal size logo )
+  ->"logo"->"small" ( small size logo )
+
+ following are objects, flag is not an array
+  ->"flag"->"std"
+  ->"flag"->"small"
+  ->"flag"->"roundstd"
+  ->"flag"->"roundsmall"
+  ->"flag"->"roundlarge"
+  
+  NOTE :- Do the same for second element in the array named team
+  
+  -------------
+  Toss
+  -------------
+  ->"win" ( given team id )
+  ->"bat" ( gives value 1 ( bat first ) or 2 ( bat second or chase in ODIs or T20s )
+  
+  ------------
+  match status
+  ------------
+  ->"ms" (Play In Progress or Match Ended )
+  
+  -----------
+  result
+  -----------
+  ->"result"
+  
+  Following are objects , result is not an array
+  
+ ->"winner" ( team id )
+ ->"by" ( how many runs or wickets)
+ ->"how" ( draw if match is draw or innings if team wins by an innings )
+ ->"mom"->"fn" ( name of man of the match )
+ 
+ ------------------------
+ past and current innings 
+ ------------------------
+ first element is always current innings 
+ 
+->"past_ings"
+
+NOTE : following are elemts of the array past_ings
+
+->"s"->"dm" ( current day for test match , always use first object for current innings and current day )
+->"s"->"a"->"cr" ( current run rate )
+->"s"->"a"->"r" ( runs )
+->"s"->"a"->"o" ( overs )
+->"s"->"a"->"w" ( wickets )
+->"s"->"a"->"b" ( byes )
+->"s"->"a"->"lb" ( leg byes )
+->"s"->"a"->"wd" ( wides )
+->"s"->"a"->"nb" ( no balls )
+->"s"->"a"->"tl" ( trail by x or lead by x )
+
+NOTE : s is not an array 
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
