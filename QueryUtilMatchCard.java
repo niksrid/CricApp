@@ -193,7 +193,7 @@ public class QueryUtilMatchCard {
 
                     JSONObject CurrentTeam1=Teams.getJSONObject(0);
                     String team1ID=CurrentTeam1.getString("i");
-                    String ShortTeamName1=currentMatch.getString("BAN");
+                    String ShortTeamName1=currentMatch.getString("sn");
                     JSONObject logo1=CurrentTeam1.getJSONObject("logo");
                     String team1Logo=logo1.getString("std");
 
