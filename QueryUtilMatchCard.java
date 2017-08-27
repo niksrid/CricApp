@@ -171,7 +171,8 @@ public class QueryUtilMatchCard {
 
             //create a JSONObject from  the JSON response string
             JSONObject basJsonResponse = new JSONObject(MatchCardsJSON);
-            JSONArray ScoreCards=basJsonResponse.getJSONArray("Scorecard");
+            JSONObject results=basJsonResponse.getJSONObject("results");
+            JSONArray ScoreCards=results.getJSONArray("Scorecard");
 
             for (int i = 0; i < ScoreCards.length() ; i++) {
                 JSONObject currentMatch = ScoreCards.getJSONObject(i);
@@ -181,7 +182,7 @@ public class QueryUtilMatchCard {
 
                 JSONObject MatchResult=currentMatch.getJSONObject("result");
 
-                int SeriesID=Series.getInt("series_id");
+                String SeriesID=Series.getString("series_id");
 
                 String SeriesName=Series.getString("series_name");
 
@@ -191,13 +192,13 @@ public class QueryUtilMatchCard {
 
 
                     JSONObject CurrentTeam1=Teams.getJSONObject(0);
-                    int team1ID=CurrentTeam1.getInt("i");
+                    String team1ID=CurrentTeam1.getString("i");
                     String ShortTeamName1=currentMatch.getString("BAN");
                     JSONObject logo1=CurrentTeam1.getJSONObject("logo");
                     String team1Logo=logo1.getString("std");
 
                 JSONObject CurrentTeam2=Teams.getJSONObject(1);
-                int team2ID=CurrentTeam2.getInt("i");
+                String team2ID=CurrentTeam2.getString("i");
                 String ShortTeamName2=currentMatch.getString("BAN");
                 JSONObject logo2=CurrentTeam1.getJSONObject("logo");
                 String team2Logo=logo2.getString("std");
@@ -213,8 +214,8 @@ public class QueryUtilMatchCard {
 
                 String matchStatus=currentMatch.getString("ms");
 
-                int matchWinner=MatchResult.getInt("winner");
-                int byRunsOrWickets=MatchResult.getInt("by");
+                String matchWinner=MatchResult.getString("winner");
+                String byRunsOrWickets=MatchResult.getString("by");
                 String DrawOrInningsWin=MatchResult.getString("how");
 
                 String Result=null;
@@ -232,7 +233,7 @@ public class QueryUtilMatchCard {
                     JSONObject LeadTrailOrTarget = CurrentDayOrInnings.getJSONObject("a");
 
                     String Team1score=null, Team1Runs=null, Team1Wickets=null, Team1Overs=null;
-                    if (team1ID != CurrentDayOrInnings.getInt("i")) {
+                    if (team1ID != CurrentDayOrInnings.getString("i")) {
                         Team1Runs = LeadTrailOrTarget.getString("r");
                         Team1Wickets = LeadTrailOrTarget.getString("w");
                         Team1Overs = LeadTrailOrTarget.getString("o");
