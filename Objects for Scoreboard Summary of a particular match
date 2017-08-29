@@ -89,6 +89,7 @@ Team names( full and short ) logo, flag
 NOTE : following are elemts of the array past_ings
 
 ->"s"->"dm" ( current day for test match , always use first object for current innings and current day )
+->"s"->"a"->"tg" ( target )
 ->"s"->"a"->"cr" ( current run rate )
 ->"s"->"a"->"r" ( runs )
 ->"s"->"a"->"o" ( overs )
@@ -98,6 +99,7 @@ NOTE : following are elemts of the array past_ings
 ->"s"->"a"->"wd" ( wides )
 ->"s"->"a"->"nb" ( no balls )
 ->"s"->"a"->"tl" ( trail by x or lead by x )
+->"s"->"a"->"tg" ( target )
 
 NOTE : s is not an array 
   
